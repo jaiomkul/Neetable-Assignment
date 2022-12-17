@@ -57,7 +57,7 @@ router.patch("/register/:id", async (req, res) => {
       .lean()
       .exec();
 
-    return res.status(200).send({ user: user });
+    return res.status(200).send({ user: user, Update: "Update successfully" });
   } catch (err) {
     return res.status(500).send({ message: err.message });
   }
